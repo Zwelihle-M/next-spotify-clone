@@ -47,7 +47,7 @@ export const authOptions = {
     SpotifyProvider({
       clientId: process.env.SPOTIFY_CLIENT_ID,
       clientSecret: process.env.SPOTIFY_SECRET,
-      authorization: "https://next-spotify-clone-rho.vercel.app/login"
+      authorization: LOGIN_URL
 
       // LOGIN_URL
     }),
