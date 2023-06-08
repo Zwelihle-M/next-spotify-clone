@@ -1,5 +1,6 @@
 import ArtistView from "@/components/ArtistView";
 import LibraryView from "@/components/LibraryView";
+import MediaPlayer from "@/components/MediaPlayer";
 import PlaylistView from "@/components/PlaylistView";
 import SearchView from "@/components/SearchView";
 import Sidebar from "@/components/Sidebar";
@@ -60,7 +61,16 @@ export default function Home() {
         )}
       </main>
 
-      <div></div>
+      {/* Song Player/Media Remote */}
+
+      <div className="sticky bottom-0">
+        <MediaPlayer
+          globalCurrentSongId={globalCurrentSongId}
+          setGlobalCurrentSongId={setGlobalCurrentSongId}
+          setGlobalIsTrackPlaying={setGlobalIsTrackPlaying}
+          globalIsTrackPlaying={globalIsTrackPlaying}
+        />
+      </div>
     </div>
   );
 }
