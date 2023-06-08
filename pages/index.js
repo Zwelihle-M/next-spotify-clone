@@ -1,3 +1,4 @@
+import LibraryView from "@/components/LibraryView";
 import PlaylistView from "@/components/PlaylistView";
 import SearchView from "@/components/SearchView";
 import Sidebar from "@/components/Sidebar";
@@ -39,6 +40,13 @@ export default function Home() {
             setGlobalArtistId={setGlobalArtistId}
           />
         )}
+                  {/* library component */}
+                  {view === "library" && (
+            <LibraryView
+              setView={setView}
+              setGlobalPlaylistId={setGlobalPlaylistId}
+            />
+          )}
       </main>
 
       <div></div>
