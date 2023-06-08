@@ -1,4 +1,5 @@
 import PlaylistView from "@/components/PlaylistView";
+import SearchView from "@/components/SearchView";
 import Sidebar from "@/components/Sidebar";
 import { useState } from "react";
 
@@ -26,6 +27,16 @@ export default function Home() {
             globalPlaylistId={globalPlaylistId}
             setGlobalCurrentSongId={setGlobalCurrentSongId}
             setGlobalIsTrackPlaying={setGlobalIsTrackPlaying}
+          />
+        )}
+        {/* searchView */}
+        {view === "search" && (
+          <SearchView
+            setView={setView}
+            setGlobalPlaylistId={setGlobalPlaylistId}
+            setGlobalCurrentSongId={setGlobalCurrentSongId}
+            setGlobalIsTrackPlaying={setGlobalIsTrackPlaying}
+            setGlobalArtistId={setGlobalArtistId}
           />
         )}
       </main>
