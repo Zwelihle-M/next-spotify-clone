@@ -1,3 +1,4 @@
+import ArtistView from "@/components/ArtistView";
 import LibraryView from "@/components/LibraryView";
 import PlaylistView from "@/components/PlaylistView";
 import SearchView from "@/components/SearchView";
@@ -40,13 +41,23 @@ export default function Home() {
             setGlobalArtistId={setGlobalArtistId}
           />
         )}
-                  {/* library component */}
-                  {view === "library" && (
-            <LibraryView
-              setView={setView}
-              setGlobalPlaylistId={setGlobalPlaylistId}
-            />
-          )}
+        {/* library component */}
+        {view === "library" && (
+          <LibraryView
+            setView={setView}
+            setGlobalPlaylistId={setGlobalPlaylistId}
+          />
+        )}
+        {/* artistView */}
+        {view === "artist" && (
+          <ArtistView
+            setView={setView}
+            globalArtistId={globalArtistId}
+            setGlobalArtistId={setGlobalArtistId}
+            setGlobalCurrentSongId={setGlobalCurrentSongId}
+            setGlobalIsTrackPlaying={setGlobalIsTrackPlaying}
+          />
+        )}
       </main>
 
       <div></div>
